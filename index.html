@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeCloud · 发现值得入手的云优惠</title>
+  <meta name="description" content="持续追踪阿里云、腾讯云的云服务器、AI 工具和 Agent 部署优惠。官方活动来源，清晰的价格与条件。">
+  <meta name="theme-color" content="#f5f7f8">
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#offers">跳到优惠列表</a>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="FreeCloud 首页"><img src="./assets/logo.svg" alt="" width="36" height="36"><span>FreeCloud<span class="brand-period">.</span></span></a>
+    <p class="sidebar-caption">好云，不必贵。</p>
+    <nav aria-label="主导航">
+      <button class="nav-item active" data-category="all"><span class="nav-symbol">▦</span>发现全部<span id="nav-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-category="server"><span class="nav-symbol">▤</span>云服务器</button>
+      <button class="nav-item" data-category="ai"><span class="nav-symbol">✳</span>AI 工具与模型</button>
+      <button class="nav-item" data-category="agent"><span class="nav-symbol">⌘</span>Agent 部署</button>
+      <a class="nav-item" href="#updates"><span class="nav-symbol">↗</span>优惠动态</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="radar-note"><span class="radar-icon" aria-hidden="true">◎</span><strong>优惠雷达</strong><p>定时追踪官方活动<br>把好价格留在这里</p></div>
+      <a class="github-link" href="https://github.com/AIPMAndy/FreeCloud" target="_blank" rel="noopener">GitHub 开源项目 <span>↗</span></a>
+      <p class="byline">Made by <a href="https://github.com/AIPMAndy">Andy</a></p>
+    </div>
+  </aside>
+  <main>
+    <header class="topbar"><span>云优惠发现站</span><div><span class="update-icon" aria-hidden="true">↻</span><span id="last-check">正在读取最新优惠</span><a href="https://github.com/AIPMAndy/FreeCloud" target="_blank" rel="noopener">Star on GitHub ↗</a></div></header>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="eyebrow">LESS SPEND. MORE BUILD.</div><h1 id="hero-title">把云成本降下来。<br><span>把好想法跑起来。</span></h1><p>云服务器、AI 工具、Agent 部署。<br>帮你发现官网里的好价格，把预算留给创造。</p><a class="primary-button" href="#offers">发现今日优惠 <span>↗</span></a></div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="cloud-mark"><img src="./assets/logo.svg" alt="" width="120" height="120"></div><div class="floating-label cloud-label">CLOUD / 少花一点</div><div class="floating-label build-label">BUILD / 多做一点 ↗</div><span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span></div>
+    </section>
+    <section class="status-strip" aria-label="收录概况"><div><strong id="offer-count">—</strong><span>条优惠收录</span></div><div><strong id="provider-count">—</strong><span>家云厂商</span></div><div><strong id="source-count">—</strong><span>个官方来源</span></div><p>每 6 小时追踪一次<span>直接前往云厂商活动会场</span></p></section>
+    <section id="offers" class="offers-section" aria-labelledby="offers-title">
+      <div class="section-heading"><div><span class="section-kicker">THE GOOD FINDS</span><h2 id="offers-title">值得看看的优惠</h2></div><span id="result-count" class="muted" aria-live="polite"></span></div>
+      <div class="filters"><div class="provider-filters" role="group" aria-label="筛选云厂商"><button class="filter-button selected" data-provider="all" aria-pressed="true">全部厂商</button><button class="filter-button" data-provider="aliyun" aria-pressed="false"><span class="provider-dot aliyun-dot"></span>阿里云</button><button class="filter-button" data-provider="tencent" aria-pressed="false"><span class="provider-dot tencent-dot"></span>腾讯云</button></div><div class="search-sort"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜产品、用途、关键词" aria-label="搜索优惠"></label><label class="sort-label"><span class="sr-only">优惠排序</span><select id="sort"><option value="recommended">精选排序</option><option value="latest">最近变化</option></select></label></div></div>
+      <div id="offer-grid" class="offer-grid" aria-live="polite"><div class="loading">正在收集好价格…</div></div>
+      <div id="empty-state" class="empty-state" hidden><span>⌕</span><h3>暂时没有匹配的优惠</h3><p>换个关键词，或查看全部厂商。</p><button id="reset-filters" class="secondary-button">查看全部优惠</button></div>
+      <div id="error-state" class="empty-state" hidden><h3>优惠暂时没有加载成功</h3><p>请刷新重试，也可以直接前往官方会场。</p><div id="fallback-links"></div></div>
+    </section>
+    <section id="updates" class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-kicker">ON THE RADAR</span><h2 id="updates-title">优惠动态</h2></div><a href="./data/offers.json" target="_blank" rel="noopener">查看开放数据 ↗</a></div><div class="updates-layout"><div id="updates-list" class="updates-list"></div><div class="updates-note"><span>KEEP BUILDING.</span><h3>少翻几个页面，<br>多做一点喜欢的事。</h3><p>持续收录官方活动里的价格与福利。<br>关注服务器，也关注 AI 时代的新工具。</p><a href="https://github.com/AIPMAndy/FreeCloud/issues" target="_blank" rel="noopener">分享一个新发现 ↗</a></div></div></section>
+    <footer><a class="footer-brand" href="./">FreeCloud.</a><span>发现好云，轻松开工。</span><a href="https://github.com/AIPMAndy/FreeCloud" target="_blank" rel="noopener">MIT 开源 · Built by Andy ↗</a></footer>
+  </main>
+  <dialog id="offer-dialog" aria-labelledby="dialog-title"><button id="close-dialog" class="dialog-close" aria-label="关闭优惠详情">×</button><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p>请启用 JavaScript 查看最新优惠数据。也可在 GitHub 仓库读取 data/offers.json。</p></noscript>
+</body>
+</html>
