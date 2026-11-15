@@ -112,4 +112,4 @@ docs/providers.md          国内外推广计划接入记录
 
 [AI酋长Andy](https://github.com/AIPMAndy)，流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
 
-微信号：AIPMAndy
+微信 AIPMAndy（微信号 AIPMAndy）

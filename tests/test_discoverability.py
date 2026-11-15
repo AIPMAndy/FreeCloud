@@ -41,7 +41,8 @@ class DiscoverabilityTests(unittest.TestCase):
         self.assertIn("流量 AI 联合创始人、星觉 AI 创始人", readme)
         self.assertIn("星觉科技", readme)
         self.assertIn("北京", readme)
-        self.assertIn("微信号：AIPMAndy", readme)
+        self.assertIn("微信 AIPMAndy", readme)
+        self.assertIn("微信号 AIPMAndy", readme)
         self.assertIn("查看活动", readme)
         self.assertIn("data/links.json", readme)
 
