@@ -62,6 +62,24 @@ Fork 后修改 `data/links.json` 的三个地址即可。普通阿里云商品�
 
 接入其他厂商时，在目录与采集器中增加官方来源、产品匹配规则，并配置自己的推广链接。厂商计划和注册状态见 [`docs/providers.md`](docs/providers.md)。
 
+## 常见问题
+
+### 采集只看官方页面吗？
+
+是。采集器只读取已配置的公开官方活动页面；匹配到价格或活动福利才写入数据。详情页保留原文片段、采集来源和上次核对时间。
+
+### 过期或未核对的价格会显示成优惠吗？
+
+不会。未验证，或距离上次核对超过 48 小时，前端把价格改为“查看活动”。详情里仍保留上次采集记录，旧数字不当成今天的价格。
+
+### 价格变化记录是降价承诺吗？
+
+不是。`changes` 里的前后价格是观察历史。活动换期、资格或页面变化后，以云厂商活动会场当时展示的为准。
+
+### 可以换成自己的推广链接吗？
+
+可以。Fork 后修改 [`data/links.json`](data/links.json) 的三个地址，用来替换促销入口。普通阿里云商品用 `aliyun`，普通腾讯云商品用 `tencent`，WorkBuddy 用 `workbuddy`。详情页仍显示真实采集来源。
+
 ## 部署到自己的 GitHub Pages
 
 1. Fork 仓库。
@@ -90,4 +108,8 @@ docs/providers.md          国内外推广计划接入记录
 
 代码采用 [MIT License](LICENSE)。云厂商名称与官方活动内容归相应权利人所有。
 
-Built by [AI酋长 Andy](https://github.com/AIPMAndy).
+## 作者
+
+[AI酋长Andy](https://github.com/AIPMAndy)，流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+
+微信 AIPMAndy（微信号 AIPMAndy）
