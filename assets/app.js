@@ -1,4 +1,9 @@
-const providers = { aliyun: { name: '阿里云', english: 'ALIBABA CLOUD', mark: 'A' }, tencent: { name: '腾讯云', english: 'TENCENT CLOUD', mark: 'T' } };
+const providers = {
+  aliyun: { name: '阿里云', english: 'ALIBABA CLOUD', mark: 'A' },
+  tencent: { name: '腾讯云', english: 'TENCENT CLOUD', mark: 'T' },
+  hoody: { name: 'Hoody', mark: 'H' },
+  'experiential-labs': { name: 'Experiential Labs', mark: 'E' },
+};
 const categories = { server: '云服务器', ai: 'AI 工具与模型', agent: 'Agent 部署' };
 const state = { provider: 'all', category: 'all', query: '', sort: 'recommended', data: null, links: null };
 const $ = (selector) => document.querySelector(selector);
@@ -6,7 +11,8 @@ const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => (
 const dateFormat = new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false });
 const formatted = (value) => value ? dateFormat.format(new Date(value)) : '待核对';
 const isFresh = (offer) => offer.status === 'verified' && offer.verifiedAt && Date.now() - new Date(offer.verifiedAt).getTime() < 48 * 60 * 60 * 1000;
-const outbound = (offer) => state.links[offer.referral];
+const outbound = (offer) => state.links[offer.referral] ?? state.data.sources.find((source) => source.id === offer.sourceId).url;
+const outboundRel = (offer) => offer.referral ? 'sponsored noopener' : 'noopener';
 
 function card(offer, index) {
   const vendor = providers[offer.provider];
@@ -14,11 +20,13 @@ function card(offer, index) {
   // Old observations remain in the dataset, but no stale price is presented as today's offer.
   const price = current ? offer.priceLabel : '查看活动';
   const suffix = current ? offer.priceSuffix : '最新价格待核对';
+  let action = offer.referral ? `去${vendor.name}活动会场` : '查看官方定价';
+  if (offer.referral === 'workbuddy') action = '查看 WorkBuddy 优惠';
   return `<article class="offer-card" style="animation-delay:${Math.min(index, 7) * 35}ms" data-offer="${escapeHtml(offer.id)}">
-    <div class="card-top"><span class="vendor-icon ${offer.provider}">${vendor.mark}</span><div class="vendor-meta"><strong>${vendor.name}</strong><small>${vendor.english}</small></div><span class="status-label ${current ? '' : 'stale'}">${current ? '已核对' : '待核对'}</span></div>
+    <div class="card-top"><span class="vendor-icon ${offer.provider}">${vendor.mark}</span><div class="vendor-meta"><strong>${vendor.name}</strong>${vendor.english ? `<small>${vendor.english}</small>` : ''}</div><span class="status-label ${current ? '' : 'stale'}">${current ? '已核对' : '待核对'}</span></div>
     <h3>${escapeHtml(offer.title)}</h3><p class="card-description">${escapeHtml(offer.description)}</p><div class="tags">${offer.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
     <div class="price-row"><strong class="price ${!current || offer.amount === null ? 'benefit' : ''}">${escapeHtml(price)}</strong><span class="price-suffix">${escapeHtml(suffix)}</span></div>
-    <div class="card-bottom"><a class="card-cta" href="${escapeHtml(outbound(offer))}" target="_blank" rel="sponsored noopener">${offer.referral === 'workbuddy' ? '查看 WorkBuddy 优惠' : `去${vendor.name}活动会场`}<span aria-hidden="true">↗</span></a><button class="icon-button copy-button" data-copy="${escapeHtml(offer.id)}" aria-label="复制${escapeHtml(offer.title)}优惠入口" title="复制优惠入口">⧉</button></div>
+    <div class="card-bottom"><a class="card-cta" href="${escapeHtml(outbound(offer))}" target="_blank" rel="${outboundRel(offer)}">${action}<span aria-hidden="true">↗</span></a><button class="icon-button copy-button" data-copy="${escapeHtml(offer.id)}" aria-label="复制${escapeHtml(offer.title)}优惠入口" title="复制优惠入口">⧉</button></div>
     <button class="detail-button" data-detail="${escapeHtml(offer.id)}">价格条件与来源 · ${formatted(offer.verifiedAt)} ↗</button>
   </article>`;
 }
@@ -55,7 +63,8 @@ function showDetails(id) {
   const offer = state.data.offers.find((item) => item.id === id);
   if (!offer) return;
   const source = state.data.sources.find((item) => item.id === offer.sourceId);
-  $('#dialog-content').innerHTML = `<p class="dialog-provider">${providers[offer.provider].name} / ${categories[offer.category]}</p><h2 id="dialog-title">${escapeHtml(offer.title)}</h2><p class="dialog-price">${escapeHtml(isFresh(offer) ? offer.priceLabel : '最新价格待核对')} <small class="price-suffix">${escapeHtml(isFresh(offer) ? offer.priceSuffix : '')}</small></p><p class="dialog-terms">${escapeHtml(offer.detail)}</p><dl><dt>官方活动原文${isFresh(offer) ? '' : '（上次采集记录）'}</dt><dd>${escapeHtml(offer.evidence || '暂未提取到明确价格，请前往会场查看。')}</dd><dt>采集来源</dt><dd>${escapeHtml(source.name)}<br>${escapeHtml(source.resolvedUrl || source.url)}</dd><dt>上次核对 / 最近检查</dt><dd>${formatted(offer.verifiedAt)} / ${formatted(offer.checkedAt)}</dd></dl><a class="primary-button" href="${escapeHtml(outbound(offer))}" target="_blank" rel="sponsored noopener">进入${offer.referral === 'workbuddy' ? ' WorkBuddy ' : providers[offer.provider].name}优惠会场 ↗</a>`;
+  const action = offer.referral ? `进入${offer.referral === 'workbuddy' ? ' WorkBuddy ' : providers[offer.provider].name}优惠会场` : '查看官方定价';
+  $('#dialog-content').innerHTML = `<p class="dialog-provider">${providers[offer.provider].name} / ${categories[offer.category]}</p><h2 id="dialog-title">${escapeHtml(offer.title)}</h2><p class="dialog-price">${escapeHtml(isFresh(offer) ? offer.priceLabel : '最新价格待核对')} <small class="price-suffix">${escapeHtml(isFresh(offer) ? offer.priceSuffix : '')}</small></p><p class="dialog-terms">${escapeHtml(offer.detail)}</p><dl><dt>官方活动原文${isFresh(offer) ? '' : '（上次采集记录）'}</dt><dd>${escapeHtml(offer.evidence || '暂未提取到明确价格，请前往会场查看。')}</dd><dt>采集来源</dt><dd>${escapeHtml(source.name)}<br>${escapeHtml(source.resolvedUrl || source.url)}</dd><dt>上次核对 / 最近检查</dt><dd>${formatted(offer.verifiedAt)} / ${formatted(offer.checkedAt)}</dd></dl><a class="primary-button" href="${escapeHtml(outbound(offer))}" target="_blank" rel="${outboundRel(offer)}">${action} ↗</a>`;
   $('#offer-dialog').showModal();
 }
 
@@ -71,7 +80,7 @@ async function copyOffer(id) {
   const offer = state.data.offers.find((item) => item.id === id);
   if (!offer) return;
   try { await navigator.clipboard.writeText(outbound(offer)); toast('优惠链接已复制，可以分享给朋友了。'); }
-  catch { showDetails(id); toast('请长按或右键“进入优惠会场”复制链接。'); }
+  catch { showDetails(id); toast('请长按或右键详情里的优惠入口复制链接。'); }
 }
 
 document.addEventListener('click', (event) => {
