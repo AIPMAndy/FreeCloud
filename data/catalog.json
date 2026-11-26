@@ -4,7 +4,9 @@
     {"id": "aliyun-ai", "provider": "aliyun", "name": "阿里云 AI 优惠会场", "url": "https://www.aliyun.com/benefit", "anchor": "Qwen4-Max", "stop": "为什么选择阿里云"},
     {"id": "aliyun-agent", "provider": "aliyun", "name": "阿里云 Agent 部署活动", "url": "https://www.aliyun.com/activity/ecs/clawdbot", "anchor": "快速部署你的", "stop": "邀请好友来养虾"},
     {"id": "tencent-market", "provider": "tencent", "name": "腾讯云官方优惠会场", "url": "https://cloud.tencent.com/act", "discoverActivity": true, "anchor": "Token Plan 低至", "stop": "为什么选择腾讯云"},
-    {"id": "workbuddy", "provider": "tencent", "name": "WorkBuddy 官方产品页", "url": "https://cloud.tencent.com/product/workbuddy", "anchor": "WorkBuddy", "stop": "常见问题"}
+    {"id": "workbuddy", "provider": "tencent", "name": "WorkBuddy 官方产品页", "url": "https://cloud.tencent.com/product/workbuddy", "anchor": "WorkBuddy", "stop": "常见问题"},
+    {"id": "hoody-pricing", "provider": "hoody", "name": "Hoody 官方定价", "url": "https://hoody.com/pricing/", "anchor": "Plans and prices", "stop": "Next: Plus when you need"},
+    {"id": "experiential-labs-pricing", "provider": "experiential-labs", "name": "Experiential Labs 官方定价", "url": "https://www.experientiallabs.ai/pricing", "anchor": "What does unlimited mean?", "stop": "Can I bring my own provider keys?"}
   ],
   "offers": [
     {"id": "aliyun-agent", "provider": "aliyun", "sourceId": "aliyun-agent", "referral": "aliyun", "category": "agent", "title": "OpenClaw / Hermes 云端部署", "description": "轻量服务器与 Token Plan 组合，适合搭建自己的常驻 AI 助手。", "detail": "组合购起价；机型、地域与套餐以会场可选项为准。", "tags": ["零代码部署", "轻量服务器"], "pricePattern": "轻量服务器\\+Token Plan组合购，\\s*(?P<amount>\\d+(?:\\.\\d+)?)元起", "priceSuffix": "起 / 组合购", "priority": 1},
@@ -14,6 +16,34 @@
     {"id": "tencent-token", "provider": "tencent", "sourceId": "tencent-market", "referral": "tencent", "category": "ai", "title": "腾讯云 Token Plan", "description": "多款国产大模型组合订阅，用于 Agent 与编程工具。", "detail": "会场宣传起价；模型、积分和订阅条件请查看当前套餐。", "tags": ["模型订阅", "Agent"], "pricePattern": "Token Plan\\s*低至\\s*(?P<amount>\\d+(?:\\.\\d+)?)元/月", "priceSuffix": "起 / 月", "priority": 5},
     {"id": "workbuddy", "provider": "tencent", "sourceId": "workbuddy", "referral": "workbuddy", "category": "ai", "title": "WorkBuddy AI 办公", "description": "用 AI 完成文档、表格与日常工作，查看最新订阅活动。", "detail": "新购、续费、扩容赠送积分的具体范围以官方活动说明为准。", "tags": ["AI 办公", "积分活动"], "benefitPattern": "限时\\s*·\\s*双倍\\s*Credits", "benefitLabel": "双倍 Credits", "priority": 6},
     {"id": "aliyun-office", "provider": "aliyun", "sourceId": "aliyun-ai", "referral": "aliyun", "category": "ai", "title": "千问办公活动套餐", "description": "围绕研究、文档与任务执行的 AI 办公订阅。", "detail": "会场宣传起价；个人版和企业版的权益与计费不同。", "tags": ["AI 办公", "活动套餐"], "pricePattern": "千问办公\\s*(?P<amount>\\d+(?:\\.\\d+)?)\\s*元起", "priceSuffix": "起", "priority": 7},
-    {"id": "tencent-server", "provider": "tencent", "sourceId": "tencent-market", "referral": "tencent", "category": "server", "title": "腾讯云轻量应用服务器", "description": "适合个人网站、小型应用与海外业务的轻量云主机。", "detail": "新用户起价；进入服务器专区核对地域、带宽与购买条件。", "tags": ["新用户", "轻量云主机"], "pricePattern": "轻量应用服务器\\s*4核大算力，新用户低至\\s*(?P<amount>\\d+(?:\\.\\d+)?)元\\s*/年", "priceSuffix": "起 / 年", "priority": 8}
+    {"id": "tencent-server", "provider": "tencent", "sourceId": "tencent-market", "referral": "tencent", "category": "server", "title": "腾讯云轻量应用服务器", "description": "适合个人网站、小型应用与海外业务的轻量云主机。", "detail": "新用户起价；进入服务器专区核对地域、带宽与购买条件。", "tags": ["新用户", "轻量云主机"], "pricePattern": "轻量应用服务器\\s*4核大算力，新用户低至\\s*(?P<amount>\\d+(?:\\.\\d+)?)元\\s*/年", "priceSuffix": "起 / 年", "priority": 8},
+    {
+      "id": "hoody-free",
+      "provider": "hoody",
+      "sourceId": "hoody-pricing",
+      "category": "server",
+      "title": "Hoody 免费 Linux 环境",
+      "description": "最多 3 个 Linux 环境，适合网站预览和轻量采集。",
+      "detail": "每人一份免费配额，免绑卡。最多 3 个 Linux 环境共享 2 核 CPU、3 GB 内存和 20 GB 存储。开通视账号资格与可用容量而定。",
+      "tags": ["Linux", "共享资源", "网站预览"],
+      "benefitPattern": "\\$0\\s*/month\\s*·\\s*no card.{0,100}?3 computers\\s+2 cores\\s*·\\s*3 GB memory\\s*·\\s*20 GB storage.{0,150}?Resources are shared across your computers",
+      "benefitLabel": "免费",
+      "priceSuffix": "免绑卡",
+      "priority": 9
+    },
+    {
+      "id": "experiential-labs-free",
+      "provider": "experiential-labs",
+      "sourceId": "experiential-labs-pricing",
+      "category": "ai",
+      "title": "Experiential Labs 免费模型 API",
+      "description": "通过 API 批量做摘要、分类和打标签，免费模型共享每日额度。",
+      "detail": "GPT-6 Luna、DeepSeek V4.1 Flash 和 Clef 共享每天 100 万输入与输出 token，每日 UTC 00:00 重置。验证支付卡时临时扣款 $1，随后退回。",
+      "tags": ["模型 API", "每日免费额度", "OpenAI 兼容"],
+      "benefitPattern": "Free core models share one pool[^.]{0,120}?1M input and output tokens a day, reset at 00:00 UTC\\..{0,200}?\\$1 card verification charge.{0,90}?charge is refunded",
+      "benefitLabel": "100 万 token / 天",
+      "priceSuffix": "验卡 $1 后退回",
+      "priority": 10
+    }
   ]
 }
