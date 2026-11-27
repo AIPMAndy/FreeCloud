@@ -1,0 +1,47 @@
+# FreeCloud
+
+> FreeCloud 云优惠雷达：追踪官方云服务器、AI 工具与 Agent 部署优惠。Open-source cloud deals radar.
+
+- 作者：AI酋长Andy（AIPMAndy），官网 https://metaver.vip/
+- 开源仓库：https://github.com/AIPMAndy/FreeCloud
+- 在线地址：https://aipmandy.github.io/FreeCloud/
+- 许可：MIT
+- 语言：中文（zh-CN）
+- 最近更新：2026-11-27
+
+## 这是什么
+
+云服务器、AI 工具与 Agent 部署的开源优惠雷达。追踪云厂商官方活动，展示优惠价格、适用条件与核对时间，直接进入对应厂商的活动会场。
+打开 FreeCloudhttps://aipmandy.github.io/FreeCloud/ · 官方采集数据data/offers.json · 厂商接入调研docs/providers.md
+
+## 主要页面
+
+- [FreeCloud · 发现值得入手的云优惠](https://aipmandy.github.io/FreeCloud/)
+
+## 内容目录
+
+- 能做什么
+- 直接前往活动会场
+- 本地运行
+- 优惠如何更新
+- 换成你的推广链接
+- 部署到自己的 GitHub Pages
+- 目录
+- 参与贡献
+- 作者
+
+## 关键事实
+
+- 名称：FreeCloud
+- 类型：中文开源项目
+- 许可：MIT
+- 语言：中文
+- 最近更新：2026-11-27
+- 仓库：https://github.com/AIPMAndy/FreeCloud
+
+## 相关链接
+
+- [作者官网](https://metaver.vip/)
+- [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
+- [开源总目录](https://aipmandy.github.io/)
+- [机器可读摘要](https://aipmandy.github.io/FreeCloud/llms.txt)
