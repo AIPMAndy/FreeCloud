@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-27T17:55:32+00:00",
+  "generatedAt": "2026-11-27T18:26:12+00:00",
   "sources": [
     {
       "id": "aliyun-market",
       "provider": "aliyun",
       "name": "阿里云上云优惠会场",
       "url": "https://www.aliyun.com/minisite/goods",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [
         "o 个人进阶版 40,000 积分/月 ¥ 39 /月 ¥ 59/月 云服务（AI 数据库等）数量 8",
@@ -14,7 +14,7 @@
         "个人高级版 200,000 积分/月 ¥ 89 /月 ¥ 179/月 云服务（AI 数据库等）数量",
         "00,000 积分/月 ¥ 89 /月 ¥ 179/月 云服务（AI 数据库等）数量 20 个 数据存"
       ],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://www.aliyun.com/minisite/goods",
       "fingerprint": "e8712c2cd561a886e25c936c6c81b1c9568e4ccbfd4ce3356d426da6caac2659",
       "changedAt": "2026-11-14T14:07:52+00:00"
@@ -24,7 +24,7 @@
       "provider": "aliyun",
       "name": "阿里云 AI 优惠会场",
       "url": "https://www.aliyun.com/benefit",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [
         "x 首发上线 Token Plan 低至5折；千问办公 29.9 元起，赢百万 AI 助力金",
@@ -32,7 +32,7 @@
         "4-Max 首发 Token Plan 5折 立即抢购 Qwen4-Max 首发 Token",
         "4-Max 首发 Token Plan 5折 立即抢购 千问办公 29.9 元起 立即抢购"
       ],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://www.aliyun.com/activity/hub/qianwenai1111",
       "fingerprint": "7ff42612a0b901f8d1bc660641ea050491f58cfa85322caf21ea2065deea7488",
       "changedAt": "2026-11-27T17:55:32+00:00"
@@ -42,14 +42,14 @@
       "provider": "aliyun",
       "name": "阿里云 Agent 部署活动",
       "url": "https://www.aliyun.com/activity/ecs/clawdbot",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [
         "轻量服务器+Token Plan组合购，68元起零代码部署，支持11款主流模型 活动规则 轻量服",
         "轻量服务器+Token Plan组合购，68元起零代码部署，支持11款主流模型 活动规则 快速部",
         "数据自主可控 分钟级上线 零代码部署 68元起 低成本部署 控制台 可视化配置 OpenCla"
       ],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://www.aliyun.com/activity/ecs/clawdbot",
       "fingerprint": "9acd3eb8b8c8edbc4b63b16e5ec815eb58c09e2c626cef9e3bccbb41085e495f",
       "changedAt": "2026-11-14T14:07:52+00:00"
@@ -60,7 +60,7 @@
       "name": "腾讯云官方优惠会场",
       "url": "https://cloud.tencent.com/act",
       "discoverActivity": true,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [
         "Token Plan 低至28元/月，支持多款国产主流大模型；Lighthouse",
@@ -68,7 +68,7 @@
         "客38元/年起。 Token Plan 低至28元/月，支持多款国产主流大模型；Lighthouse",
         "thouse Agent 4核4G 新客38元/年起。 全线产品特惠 存储 4.9折起 ；数据库 3"
       ],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://cloud.tencent.com/act/pro/double11-202611?from=30507",
       "fingerprint": "ba1f8619e76e77a6d37d69f91c09429f8bd73da79ebf8f75ab998827f7417a9a",
       "changedAt": "2026-11-14T14:07:52+00:00"
@@ -78,12 +78,12 @@
       "provider": "tencent",
       "name": "WorkBuddy 官方产品页",
       "url": "https://cloud.tencent.com/product/workbuddy",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [
         "ills 随取随用 立即前往 限时 · 双倍 Credits 限时钜惠 活动期间新购/续费/扩容，按账号数与"
       ],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://cloud.tencent.com/product/workbuddy",
       "fingerprint": "c49578d1c0b59ed1300ff485223f374714a4e4d7e3f8be0ed2b63d777aadc259",
       "changedAt": "2026-11-14T14:07:52+00:00"
@@ -93,10 +93,10 @@
       "provider": "hoody",
       "name": "Hoody 官方定价",
       "url": "https://hoody.com/pricing/",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://hoody.com/pricing/",
       "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "changedAt": "2026-11-26T03:27:05+00:00"
@@ -106,10 +106,10 @@
       "provider": "experiential-labs",
       "name": "Experiential Labs 官方定价",
       "url": "https://www.experientiallabs.ai/pricing",
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "status": "ok",
       "signals": [],
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "resolvedUrl": "https://www.experientiallabs.ai/pricing",
       "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "changedAt": "2026-11-26T03:27:05+00:00"
@@ -131,12 +131,12 @@
       ],
       "priceSuffix": "起 / 组合购",
       "priority": 1,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 68.0,
       "priceLabel": "¥68",
       "evidence": "轻量服务器+Token Plan组合购，68元起",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -154,12 +154,12 @@
       ],
       "priceSuffix": "起 / 年",
       "priority": 2,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 38.0,
       "priceLabel": "¥38",
       "evidence": "Lighthouse Agent 4核4G 新客38元/年起",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -177,12 +177,12 @@
       ],
       "priceSuffix": "/ 月",
       "priority": 3,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 39.0,
       "priceLabel": "¥39",
       "evidence": "Pro 个人进阶版 40,000 积分/月 ¥ 39 /月",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -200,7 +200,7 @@
       ],
       "priceSuffix": "起",
       "priority": 4,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 19.9,
       "priceLabel": "¥19.9",
       "evidence": "Qoder 低至19.9元",
@@ -223,12 +223,12 @@
       ],
       "priceSuffix": "起 / 月",
       "priority": 5,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 28.0,
       "priceLabel": "¥28",
       "evidence": "Token Plan 低至28元/月",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -245,13 +245,13 @@
         "积分活动"
       ],
       "priority": 6,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": null,
       "priceLabel": "双倍 Credits",
       "priceSuffix": "限时活动",
       "evidence": "限时 · 双倍 Credits",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -269,12 +269,12 @@
       ],
       "priceSuffix": "起",
       "priority": 7,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 29.9,
       "priceLabel": "¥29.9",
       "evidence": "千问办公 29.9 元起",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -292,12 +292,12 @@
       ],
       "priceSuffix": "起 / 年",
       "priority": 8,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": 109.0,
       "priceLabel": "¥109",
       "evidence": "轻量应用服务器 4核大算力，新用户低至 109元 /年",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-14T14:07:52+00:00"
     },
     {
@@ -315,12 +315,12 @@
       ],
       "priceSuffix": "免绑卡",
       "priority": 9,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": null,
       "priceLabel": "免费",
       "evidence": "$0 /month · no card For your first sites, Bots and personal projects. 3 computers 2 cores · 3 GB memory · 20 GB storage 10 Mbit/s ",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-26T03:27:05+00:00"
     },
     {
@@ -338,12 +338,12 @@
       ],
       "priceSuffix": "验卡 $1 后退回",
       "priority": 10,
-      "checkedAt": "2026-11-27T17:55:32+00:00",
+      "checkedAt": "2026-11-27T18:26:12+00:00",
       "amount": null,
       "priceLabel": "100 万 token / 天",
       "evidence": "Free core models share one pool of 10 RPM, 250K TPM and 1M input and output tokens a day, reset at 00:00 UTC. Is Free really free?",
       "status": "verified",
-      "verifiedAt": "2026-11-27T17:55:32+00:00",
+      "verifiedAt": "2026-11-27T18:26:12+00:00",
       "changedAt": "2026-11-26T03:27:05+00:00"
     }
   ],
