@@ -41,9 +41,7 @@ jobs:
         run: python scripts/build.py
       - name: Ensure llms.txt in Pages artifact
         run: mkdir -p dist && cp llms.txt dist/llms.txt
-      - name: Ensure sitemap and robots in Pages artifact
-        run: mkdir -p dist && cp sitemap.xml robots.txt dist/
-        uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
